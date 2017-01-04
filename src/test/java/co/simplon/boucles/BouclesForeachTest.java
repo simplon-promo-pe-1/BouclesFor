@@ -16,9 +16,9 @@ public class BouclesForeachTest {
 		
 		assertEquals(4, tableauSortie.length);
 		assertEquals("AE", tableauSortie[0]);
-		assertEquals("BE", tableauSortie[0]);
-		assertEquals("CE", tableauSortie[0]);
-		assertEquals("DE", tableauSortie[0]);
+		assertEquals("BE", tableauSortie[1]);
+		assertEquals("CE", tableauSortie[2]);
+		assertEquals("DE", tableauSortie[3]);
 	}
 	
 	@Test
