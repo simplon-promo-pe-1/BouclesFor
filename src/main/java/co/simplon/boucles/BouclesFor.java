@@ -136,11 +136,33 @@ public class BouclesFor {
 	}
 
 	public String[] suffixerTableau(String[] tableauEntree, String suffixe) {
-		return null;
+		String[] tableauSortie = new String[tableauEntree.length];
+		int index = 0;
+		
+		for (String element : tableauEntree) {
+			tableauSortie[index] = element + suffixe;
+			index++;
+		}
+		
+		return tableauSortie;
 	}
 
 	public Integer[] applanirMatrice(Integer[][] matrice) {
-		return null;
+		int taille = 0;
+		for (Integer[] ligne : matrice) {
+			taille += ligne.length;
+		}
+		
+		Integer[] tableauSortie = new Integer[taille];
+		int index = 0;
+
+		for (Integer[] ligne : matrice) {
+			for (Integer element : ligne) {
+				tableauSortie[index] = element;
+				index++;
+			}
+		}
+		return tableauSortie;
 	}
 
 	public int[] construireTableauAvecWhile() {
