@@ -13,6 +13,8 @@ public class BouclesForMethodeIterativeTest {
 		int[] tableau = boucle.construireTableau();
 		
 		assertEquals(10, tableau.length);
+		assertEquals(1, tableau[0]);
+		assertEquals(10, tableau[9]);
 	}
 
 	@Test
@@ -40,9 +42,12 @@ public class BouclesForMethodeIterativeTest {
 	@Test
 	public void boucle_for_infinie_interrompue() {
 		BouclesFor boucle = new BouclesFor();
+		int max = BouclesFor.MAX_SUPPORTED;
 		
 		int[] tableau = boucle.construireTableau();
 		
-		assertEquals(BouclesFor.MAX_SUPPORTED, tableau.length);
+		assertEquals(max, tableau.length);
+		assertEquals(35, tableau[34]);
+		assertEquals(max, tableau[max - 1]);
 	}
 }
