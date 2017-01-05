@@ -166,11 +166,40 @@ public class BouclesFor {
 	}
 
 	public int[] construireTableauAvecWhile() {
-		return null;
+		final int tailleTableau = this.fin - this.debut + 1;
+		int[] tableauSortie = new int[tailleTableau];
+		
+		int index = 0;
+		int valeurCourante = this.debut;
+		
+		while (index < tailleTableau) {
+			tableauSortie[index] = valeurCourante;
+			index++;
+			valeurCourante++;
+		}
+		
+		return tableauSortie;
 	}
 
 	public int[] construireTableauEntiersPairsAvecWhile() {
-		return null;
+		final int tailleTableau = (this.fin - this.debut + 1) / 2;
+		int[] tableauSortie = new int[tailleTableau];
+		
+		int index = 0;
+		int valeurCourante;
+		if (this.debut % 2 == 0) {
+			valeurCourante = this.debut;
+		} else {
+			valeurCourante = this.debut + 1;
+		}
+		
+		while (index < tailleTableau) {
+			tableauSortie[index] = valeurCourante;
+			index++;
+			valeurCourante += 2;
+		}
+		
+		return tableauSortie;
 	}
 
 }
